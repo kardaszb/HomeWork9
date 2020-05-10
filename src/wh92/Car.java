@@ -15,4 +15,9 @@ public class Car extends Vehicle {
     public void setSeatNo(int seatNo) {
         this.seatNo = seatNo;
     }
+
+    @Override
+    public String toString() {
+        return "Samochod: <" + getName() + "> , jedzie w kierunku: " + getDirection();
+    }
 }

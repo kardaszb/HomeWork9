@@ -15,4 +15,9 @@ public class MotorBike extends Vehicle {
     public void setSpeedLimit(int speedLimit) {
         this.speedLimit = speedLimit;
     }
+
+    @Override
+    public String toString() {
+        return "Motocykl: <" + getName() + "> , jedzie w kierunku: " + getDirection();
+    }
 }

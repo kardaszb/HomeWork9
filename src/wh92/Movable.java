@@ -1,11 +1,11 @@
 package wh92;
 
 public interface Movable {
-    String turnLeft();
+    void turnLeft();
 
-    String turnRight();
+    void turnRight();
 
-    String goForward();
+    void goForward();
 
-    String goBack();
+    void goBack();
 }

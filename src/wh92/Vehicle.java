@@ -2,6 +2,7 @@ package wh92;
 
 abstract public class Vehicle implements Movable {
     private String name;
+    private String direction;
     private int prodYear;
 
     public Vehicle(String name, int prodYear) {
@@ -25,24 +26,32 @@ abstract public class Vehicle implements Movable {
         this.prodYear = prodYear;
     }
 
-    @Override
-    public String turnLeft() {
-        return "lewo";
+    public String getDirection() {
+        return direction;
+    }
+
+    private void setDirection(String direction) {
+        this.direction = direction;
     }
 
     @Override
-    public String turnRight() {
-        return "prawo";
+    public void turnLeft() {
+        setDirection("lewo");
     }
 
     @Override
-    public String goForward() {
-        return "przod";
+    public void turnRight() {
+        setDirection("prawo");
     }
 
     @Override
-    public String goBack() {
-        return "tyl";
+    public void goForward() {
+        setDirection("przod");
+    }
+
+    @Override
+    public void goBack() {
+        setDirection("tyl");
     }
 
 }

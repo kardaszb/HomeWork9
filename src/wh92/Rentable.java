@@ -1,7 +1,9 @@
 package wh92;
 
 public interface Rentable {
-    Person rent(String firstName, String lastName, String id);
-    Person handOver();
+    void rent(String firstName, String lastName, String id, Person person);
+
+    void handOver();
+
     boolean isRent();
 }
